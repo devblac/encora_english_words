@@ -1,0 +1,9 @@
+<mat-form-field appearance="outline">
+  <mat-label>File input</mat-label>
+  <input matInput readonly [value]="fileName" placeholder="Choose a file...">
+  <button matSuffix mat-icon-button (click)="fileInput.click()">
+  <mat-icon>attach_file</mat-icon>
+  </button>
+  <input hidden #fileInput type="file" (change)="onFileSelected($event)">
+  <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+</mat-form-field>
